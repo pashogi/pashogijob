@@ -1,0 +1,75 @@
+h1, h2, h3, h4, p, ul, ol, li {
+	font-family: Ubuntu;
+	}
+	
+ul {
+	list-style-type: circle;
+	margin-right: 20%;
+}
+
+li, p {
+	margin-bottom: 10px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+hr {
+  background-color: #000000;
+  height: 1px;
+  border: none;
+}
+
+.hero-banner {
+	background-image: url('https://raw.githubusercontent.com/pashogi/pashogijob/refs/heads/main/background_bordo.webp');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 40vh;
+	display: flex;
+	align-items: center;
+}
+
+.banner-content h1 {
+	font-size: 32px;
+	margin-bottom: 10px;
+	margin-left: 40px;
+}
+
+.banner-content h2 {
+	font-size: 18px;
+	margin-bottom: 15px;
+	margin-left: 40px;
+	line-height: 1.5;
+}
+
+        /* Блок информации под баннером (аватар + имя) */
+        .profile-info-bar {
+            position: relative;
+            padding: 0 32px 32px 32px;
+            display: flex;
+            align-items: flex-end;
+            margin-top: -30px; /* сдвигаем контент вверх, создавая отступ для мобильных */
+        }
+
+        /* Контейнер аватарки */
+        .avatar-wrapper {
+            position: relative;
+            width: 200px; /* размер аватарки Facebook */
+            height: 200px;
+            margin-top: -50px; /* главный трюк: выталкиваем круг вверх на баннер */
+            flex-shrink: 0;
+        }
+
+        .avatar-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff; /* белая рамка вокруг фото */
+            background-color: #fff;
+        }
