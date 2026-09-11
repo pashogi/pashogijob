@@ -36,18 +36,16 @@ hr {
 
 .hero-banner {
 	background-image: url('https://raw.githubusercontent.com/pashogi/pashogijob/refs/heads/main/background_bordo.webp');
-	background-size: cover;
-/*	background-position: center;*/
-	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
 	width: 100%;
-	height: 30vh;
-	display: flex;
-	align-items: start;
+	display: inline-block;
+	min-height: 320px;
 }
 
 .banner-content h1 {
 	font-size: 30px;
-	margin-top: 10%;
+	margin-top: 2%;
 	padding-left: 40px;
 	margin-bottom: 10px;
 }
@@ -62,20 +60,16 @@ hr {
         /* Блок информации под баннером (аватар + имя) */
         .profile-info-bar {
             position: relative;
-            padding: auto;
-            display: flex;
             align-items: flex-end;
 			margin-left: 5%;
-            margin-top: -30px; /* сдвигаем контент вверх, создавая отступ для мобильных */
+            margin-top: 20px;
         }
 
         /* Контейнер аватарки */
         .avatar-wrapper {
-            position: relative;
             width: 180px; /* размер аватарки Facebook */
             height: 180px;
-			margin-top: -20px; /* главный трюк: выталкиваем круг вверх на баннер */
-            flex-shrink: 0;
+            margin-top: -10%;
         }
 
         .avatar-image {
@@ -94,15 +88,15 @@ hr {
 	<body>
 	<header class="hero-banner">
 	<div class="banner-content">
-		<h1 style="color: FFDAB9; text-shadow: 0 0 10px #000000, 0 0 10px #000000;">Баранов Павел</h1>
-		<h2 style="color: EEE8AA; text-shadow: 0 0 5px #000000, 0 0 5px #000000;">г. Минск<br>pashogi@gmail.com<br>+375 (29) 709 02 64 <h2>
-		<a href="viber://chat?number=%2B375297090264">
+		<h1 style="margin-left: 2%; color: FFDAB9; text-shadow: 0 0 10px #000000, 0 0 10px #000000;">Баранов Павел</h1>
+		<h2 style="margin-left: 2%; color: EEE8AA; text-shadow: 0 0 5px #000000, 0 0 5px #000000;">г. Минск<br>pashogi@gmail.com<br>+375 (29) 709 02 64 <h2>
+		<a style="margin-left: 2%; href="viber://chat?number=%2B375297090264">
 		<img src="https://raw.githubusercontent.com/pashogi/pashogijob/26038a64ed1ea33e8e026722dd993c3e9416eed4/Viber_icon.svg" width="30" height="30">
 		</a>
-		<a style="margin-left: 5%;" href="tg://resolve?domain=ngorongebe">
+		<a style="margin-left: 1%;" href="tg://resolve?domain=ngorongebe">
 		<img src="https://raw.githubusercontent.com/pashogi/pashogijob/44e76a7d1df6c3a3573ff84d5395dd48185c1410/Telegram_Logo.svg" width="30" height="30">
 		</a>
-		<a style="margin-left: 5%;" href="mailto:pashogi@domain.com">
+		<a style="margin-left: 1%;" href="mailto:pashogi@domain.com">
 		<img src="https://raw.githubusercontent.com/pashogi/pashogijob/b5229784392f26fadb4ae11a9f41c26dcbef3852/Gmail_icon.svg" width="30" height="30">
 		</a>
 	</div>
@@ -114,7 +108,7 @@ hr {
                 <img class="avatar-image" src="https://raw.githubusercontent.com/pashogi/pashogijob/refs/heads/main/pashogi_foto_3.webp" alt="Аватар">
             </div>
         </div>
-		<h1 style="margin-left: 5%; margin-top: 5%; margin-bottom: 15px; color: #920000;">Образование</h1>
+		<h1 style="margin-left: 5%; margin-top: 1%; margin-bottom: 15px; color: #920000;">Образование</h1>
 		<p style="margin-left: 5%; margin-bottom: 5px;"><b>Башкирский государственный университет</b></p>
 		<p style="margin-left: 5%; margin-bottom: 5px;">Филологический факультет</p>
 		<p style="margin-left: 5%; margin-bottom: 5px;">Специализация: русский язык и&nbsp;литература</p>
