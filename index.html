@@ -150,12 +150,57 @@ hr {
             border: 3px solid #fff; 
             background-color: #fff;
         }
-	
+		html {
+  scroll-behavior: smooth;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #A0522D;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+  
+  /* Настройки для плавной анимации появления */
+  transition: opacity 0.4s ease, transform 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Класс для скрытого состояния */
+.back-to-top.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* При скрытии кнопка чуть опускается */
+}
+
+.back-to-top:hover {
+  background-color: #920000;
+  transform: translateY(-5px); /* Эффект приподнимания работает, только когда кнопка активна */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.back-to-top:active {
+  transform: translateY(0);
+}
+
   </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 	</head>
 	<body>
+
 	<header class="hero-banner">
 	<div class="banner-content">
 		<h1 style="color: FFDAB9; text-shadow: 0 0 10px #000000, 0 0 10px #000000;">Баранов Павел</h1>
@@ -281,5 +326,20 @@ hr {
 	<div class="gal1"><iframe class="gal2" src="https://online.fliphtml5.com/pjuuw/tahh/" title="Храм-памятник земли белорусской_" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
 	<h2>Энциклопедия для&nbsp;школьников и&nbsp;студентов. Русский язык </h2>
 	<div class="gal1"><iframe class="gal2" src="https://online.fliphtml5.com/pjuuw/otoj/" title="Энциклопедия школьников и студентов - Русский язык" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>
+<a href="#" class="back-to-top hidden" id="backToTop" aria-label="Вернуться в начало страницы">
+  ↑
+</a>
+<script>
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  // Если страница прокручена больше чем на 300px, убираем класс hidden, иначе добавляем
+  if (window.scrollY > 300) {
+    backToTopButton.classList.remove('hidden');
+  } else {
+    backToTopButton.classList.add('hidden');
+  }
+});
+</script>
 	</body>
 </html>
